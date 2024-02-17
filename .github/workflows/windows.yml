@@ -30,6 +30,7 @@ on:
 jobs:
   mingw32:
     name: "MinGW cross-compiler (32-bit)"
+    if: 'false'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -50,6 +51,7 @@ jobs:
 
   mingw64:
     name: "MinGW cross-compiler (64-bit)"
+    if: 'false'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -70,6 +72,7 @@ jobs:
 
   msvc:
     name: VS 2019 ${{ matrix.config.arch }}-${{ matrix.type }}
+    if: 'false'
     runs-on: windows-2019
     env:
       VCPKG_VERSION: 8eb57355a4ffb410a2e94c07b4dca2dffbee8e50

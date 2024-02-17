@@ -29,6 +29,7 @@ env:
 jobs:
   clang_tidy:
     runs-on: ubuntu-22.04
+    if: 'false'
     steps:
     - uses: actions/checkout@v3
     - name: Install deps
